@@ -1,0 +1,158 @@
+ORACLE'S API INSTALLATION GUIDE FOR LINUX
+--------------------------------------------------
+The API (Application Programming Interface) module for oracle can not be installed by the normal
+"apt-get install" of which the software program displays instructions on how to install for the 
+database modules.
+
+Thats because the dependencies for oracle's "cx_oracle" module working on python
+is quiet extensive in terms of the dependencies needed to install the
+API:
+
+The version of the "Oracle Instant Client" dependency determines the type of 
+oracle database servers that can be connected to e.g Oracled Instant client for Oracle 9g
+will not connect to an Oracle 11g server, although an 11g instant client should work with
+later versions:
+
+Therefore this instruction guide provides procedures to successsfully install the
+the cx_oracle API and its dependencies.
+
+
+-------------------------------------------------
+Instructions
+-------------------------------------------------
+
+Step 1: Install Prerequisite Software
+-------------------------------------
+
+You will need to have the following packages installed to get Oracle Instant Client and cx_Oracle installed:
+
+* build-essential
+* unzip
+* python-dev
+* libaio-dev
+
+so go in a terminal and type:
+
+
+
+# sudo apt-get install build-essential unzip python-dev libaio-dev
+
+
+--------------------------------------------------------------------
+Step 2: Download and unzip Oracle's instantclient archives
+--------------------------------------------------------------------
+
+These hints are based on using Oracle's instantclient_11_1.
+It is necessary to download both instantclient-linux-basic and instantclient-sdk-linux from oracle.com in order to successfully compile.
+
+Each compressed tar ball needs to be extracted to the exact same location.
+Uncompress and untar each file from the same location in order to achieve this
+result.
+
+After both packages are untarred to there installation location a link needs
+to be made inside the instantclient_11_1 directory
+
+
+
+    cd $ORACLE_HOME
+    ln -s libclntsh.so.x.x libclntsh.so
+
+
+-----------------------------------------------------------------------
+Step 3: Set environment variables
+-----------------------------------------------------------------------
+
+It is necessary to set environment variables ORACLE_HOME and LD_LIBRARY_PATH inside $HOME/.profile in order for cx_Oracle to import properly after installation and in order to build correctly.
+
+Example ($HOME/.profile):
+
+
+    export ORACLE_HOME=[your installation path]/instantclient_11_1
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME
+
+
+Hint:
+
+
+    If after modifying your $HOME/.profile the system cannot found $ORACLE_HOME add this variables in /etc/environment then log off and log in again to force the environment reload.
+
+
+-----------------------------------------------------------------------
+Step 4: Update ldconfig
+-----------------------------------------------------------------------
+
+Add the instantclient path ([your installation path]/instantclient_11_1) to ldconfig:
+
+    sudo gedit /etc/ld.so.conf.d/oracle.conf
+
+
+then iussue an
+
+    ldconfig
+
+
+------------------------------------------------------------------------
+Step 5: Download and build cx_Oracle
+------------------------------------------------------------------------
+
+Download cx_Oracle at http://cx-oracle.sourceforge.net and unzip wherever you want, then...
+
+
+
+    cd [your cx_Oracle installation path]
+    python setup.py build
+    python setup.py install
+
+
+Make a quick check:
+
+
+
+    luca@ubuntu:~$ python
+    Python 2.6.5 (r265:79063, Apr 16 2010, 13:09:56)
+    [GCC 4.4.3] on linux2
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> import cx_Oracle
+    >>> print cx_Oracle.version
+    5.0.3
+
+
+
+-----------------------------------------------------------------------------
+In case of troubles
+-----------------------------------------------------------------------------
+
+If you get this message during the quick check step:
+
+
+
+    luca@ubuntu:~$ python
+    Python 2.6.5 (r265:79063, Apr 16 2010, 13:09:56)
+    [GCC 4.4.3] on linux2
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> import cx_Oracle
+    Traceback (most recent call last):
+    File "", line 1, in
+    ImportError: libclntsh.so.11.1: cannot open shared object file: No such file or directory
+
+
+You forgot to add the instantclient path in ldconfig; adding it will fix this problem. 
+
+
+
+--------------------------------------------------
+ORACLE'S API INSTALLATION GUIDE FOR WINDOWS
+--------------------------------------------------
+
+Download cx_Oracle at http://cx-oracle.sourceforge.net and unzip wherever you want, then...
+
+
+
+    cd [your cx_Oracle installation path]
+    python setup.py build
+    python setup.py install
+
+If you get an error that includes this message(“ImportError: No module named setuptools”), 
+then you would also need to install “setuptools”:
+
+Follow the instructions here: http://pypi.python.org/pypi/setuptools
