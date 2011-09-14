@@ -606,11 +606,11 @@ class database_interaction_dialog(QtGui.QDialog,interaction_dialog):
                     for iterate in responce:
                         table_list.append((str(iterate[0]),''))
                     variables.table_description = variables.database_oracle_query.description
-                    self.save_report.setEnabled(True)
+                    self.save_report_button.setEnabled(True)
                     self.table_insert_data(variables.database_oracle_query.description,table_list)
                     self.response_table.removeColumn(1)
                 else:
-                    self.save_report.setEnabled(False)
+                    self.save_report_button.setEnabled(False)
 
             except Exception,e:
                 self.interact_textBrowser.append('<font color=red>%s</font>'%(e))
