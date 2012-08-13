@@ -20,7 +20,7 @@ class password_manager(QtGui.QDialog,Ui_password_manager):
 
         import sqlite3
 
-        database_read = sqlite3.connect(os.getcwd() + os.sep + 'metabase_database.db')
+        database_read = sqlite3.connect(os.getcwd() + os.sep + 'hexorbase_database.db')
         database_query_read = database_read.cursor()
         import time
         try:
@@ -67,12 +67,12 @@ class password_manager(QtGui.QDialog,Ui_password_manager):
         '''
         import sqlite3
 
-        if 'metabase_database.db' in os.listdir(os.getcwd()):
-            os.remove(os.getcwd() + os.sep + 'metabase_database.db')
+        if 'hexorbase_database.db' in os.listdir(os.getcwd()):
+            os.remove(os.getcwd() + os.sep + 'hexorbase_database.db')
 
         row_numbers = int(self.password_manager_table.rowCount())
 
-        database_file = sqlite3.connect(os.getcwd() + os.sep + 'metabase_database.db')      # Creates database for passwords in local working directory
+        database_file = sqlite3.connect(os.getcwd() + os.sep + 'hexorbase_database.db')      # Creates database for passwords in local working directory
         database_query = database_file.cursor()
         database_query.execute('''create table if not exists 'credentials' (username text, password text)''')
 

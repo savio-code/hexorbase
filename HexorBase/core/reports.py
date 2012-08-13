@@ -16,6 +16,8 @@ class report(QtGui.QDialog,Ui_reports_dialog):
 
         self.query_responce_table = variables.report_raw_data
 
+        self.set_frameless_window()
+
         self.connect(self,QtCore.SIGNAL('update progress'),self.update_progress)
 
         self.rows = self.query_responce_table.rowCount()
@@ -34,6 +36,13 @@ class report(QtGui.QDialog,Ui_reports_dialog):
         self.report.write('<tr>')
 
         thread.start_new_thread(self.process_data,())
+
+
+    def set_frameless_window(self):
+        try:
+            self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        except:pass
+
 
     def process_data(self):
         for row_iterate in xrange(self.rows):
@@ -58,6 +67,8 @@ class report(QtGui.QDialog,Ui_reports_dialog):
         self.count += 1
         self.progressBar.setValue(self.count)
         self.setWindowTitle('Generating Report ('+ str(self.progressBar.text()) +')')
+        if(self.count == self.limit):
+            self.close()
 
 
 
