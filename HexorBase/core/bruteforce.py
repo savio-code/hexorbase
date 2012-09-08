@@ -94,6 +94,13 @@ class brutefore_dialog(QtGui.QDialog,Ui_bruteforce_attack_dialog):
         self.attack_server_label.setPixmap(QtGui.QPixmap("%s/Icons/sql-server-2008-logo.ico"%(os.getcwd())))
 
 
+    def line_count(self,filename):
+        count = 0
+        files = open(filename,'r')
+        for line in files:
+            count += 1
+        files.close()
+        return(count)
 
 
     def select_userlist(self):
@@ -106,7 +113,7 @@ class brutefore_dialog(QtGui.QDialog,Ui_bruteforce_attack_dialog):
         if userlist_name:
             userlist_name_process = open(userlist_name,'r')
             userlist_name_lists = userlist_name_process.read()
-            userlist_number = userlist_name_lists.count('\n')
+            userlist_number = self.line_count(userlist_name)
             userlist = userlist_name_lists
             filename = userlist_name.split('/')[-1]
             self.userlist_details.setText('<font color=green>%s</font>'%(filename))
@@ -125,7 +132,7 @@ class brutefore_dialog(QtGui.QDialog,Ui_bruteforce_attack_dialog):
         if wordlist_name:
             wordlist_name_process = open(wordlist_name,'r')
             wordlist_name_lists = wordlist_name_process.read()
-            wordlist_number = wordlist_name_lists.count('\n')
+            wordlist_number = self.line_count(wordlist_name)
             wordlist = wordlist_name_lists
             filename = wordlist_name.split('/')[-1]
             self.wordlist_details.setText('<font color=green>%s</font>'%(filename))
