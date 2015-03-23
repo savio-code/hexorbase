@@ -28,26 +28,26 @@ Icon can also be found at /usr/share/applications for KDE and also GNOME:
 There you find _"HexorBase.desktop"_
 
 
-###To get the source code for this project from SVN, here's the checkout link: *
+####To get the source code for this project from SVN, here's the checkout link:
 
 <code>root@host:~# svn checkout http://hexorbase.googlecode.com/svn/HexorBase/</code>
 
 
-###HexorBase Video Tutorial
+####HexorBase Video Tutorial
 
 
-[![Alt text for your video](http://img.youtube.com/vi/T-D1KVIuvjA/0.jpg)](http://www.youtube.com/watch?v=n8qcoqA2ENA)
+[![Alt text for your video]](http://www.youtube.com/watch?v=n8qcoqA2ENA)
 
-####Video Credits: Maurizio Schmidt
+#####Video Credits: Maurizio Schmidt
 
 
-###Check out my other project:
+####Check out my other project:
 
 https://github.com/savio-code/fern-wifi-cracker
 
 https://github.com/savio-code/ghost-phisher
 
 
-###Regards:
+####Regards:
 
 {{{Saviour Emmanuel Ekiko}}}
