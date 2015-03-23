@@ -32,6 +32,10 @@ There you find _"HexorBase.desktop"_
 
 <code>root@host:~# svn checkout http://github.com/savio-code/hexorbase/trunk/HexorBase/</code>
 
+###Screenshots
+
+<img src="http://tools.kali.org/wp-content/uploads/2014/02/hexorbase.png"/>
+
 
 ###Check out my other project:
 
