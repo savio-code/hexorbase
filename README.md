@@ -34,7 +34,7 @@ There you find _"HexorBase.desktop"_
 
 ###Screenshots
 
-<img src="http://tools.kali.org/wp-content/uploads/2014/02/hexorbase.png"/>
+<img src="http://tools.kali.org/wp-content/uploads/2014/02/hexorbase.png" height="500" width="700"/>
 
 
 ###Check out my other project:
