@@ -36,7 +36,7 @@ There you find _"HexorBase.desktop"_
 ###HexorBase Video Tutorial
 
 
-[![Alt text for your video](http://img.youtube.com/vi/T-D1KVIuvjA/0.jpg)](http://www.youtube.com/watch?v=n8qcoqA2ENA)
+[![Alt te]](http://www.youtube.com/watch?v=n8qcoqA2ENA)
 
 ####Video Credits: Maurizio Schmidt
 
