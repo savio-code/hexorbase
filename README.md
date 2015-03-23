@@ -28,17 +28,9 @@ Icon can also be found at /usr/share/applications for KDE and also GNOME:
 There you find _"HexorBase.desktop"_
 
 
-###To get the source code for this project from SVN, here's the checkout link: *
+###To get the source code for this project from SVN, here's the checkout link:
 
 <code>root@host:~# svn checkout http://github.com/savio-code/hexorbase/trunk/HexorBase/</code>
-
-
-###HexorBase Video Tutorial
-
-
-[![Alt te]](http://www.youtube.com/watch?v=n8qcoqA2ENA)
-
-####Video Credits: Maurizio Schmidt
 
 
 ###Check out my other project:
@@ -50,4 +42,4 @@ https://github.com/savio-code/ghost-phisher
 
 ###Regards:
 
-{{{Saviour Emmanuel Ekiko}}}
+Saviour Emmanuel Ekiko
