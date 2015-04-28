@@ -13,7 +13,7 @@ python-pymssql<br>
 python-qscintilla2<br>
 
 ###Downloads
-<a href="https://github.com/savio-code/downloads/raw/master/hexorbase_1.0_all.deb">Click here</a> to download
+<a href="https://github.com/savio-code/downloads/raw/master/hexorbase_1.0_all.deb">Click here</a> to download the latest version
 
 To install simply run the following command in terminal after changing directory to the path were the downloaded package is:
 
