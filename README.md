@@ -1,9 +1,5 @@
 HexorBase is a database application designed for administering and auditing multiple database servers simultaneously from a centralized location, it is capable of  performing SQL queries and bruteforce attacks against common database servers (MySQL, SQLite, Microsoft SQL Server, Oracle, PostgreSQL ).HexorBase allows packet routing through proxies or even metasploit pivoting antics to communicate with remotely inaccessible servers which are hidden within local subnets.
 
-###Downloads
-<a href="https://github.com/savio-code/downloads/raw/master/hexorbase_1.0_all.deb">Click here</a> to download
-<hr/>
-
 It works on Linux and Windows running the following:
 
 ###Requirements:
@@ -16,6 +12,8 @@ python-psycopg2<br>
 python-pymssql<br>
 python-qscintilla2<br>
 
+###Downloads
+<a href="https://github.com/savio-code/downloads/raw/master/hexorbase_1.0_all.deb">Click here</a> to download
 
 To install simply run the following command in terminal after changing directory to the path were the downloaded package is:
 
