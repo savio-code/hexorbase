@@ -1,7 +1,7 @@
-<hr>
-<h5>Create portable static executables from dynamic executables that will run on every distribution of linux without the need of recompiling, <a target="_blank" href="http://www.elfex-pro.com">Click here</a> for more information</h5>
-<hr>
+<h3><i>Support Ghost Phisher Development</i></h3>
+<h3>Bitcoin: &nbsp;&nbsp;  1AoBfNLfwDrw4ofZXZVm9YfeaFCXtG9k9B</h3>
 
+<hr/>
 HexorBase is a database application designed for administering and auditing multiple database servers simultaneously from a centralized location, it is capable of  performing SQL queries and bruteforce attacks against common database servers (MySQL, SQLite, Microsoft SQL Server, Oracle, PostgreSQL ).HexorBase allows packet routing through proxies or even metasploit pivoting antics to communicate with remotely inaccessible servers which are hidden within local subnets.
 
 It works on Linux and Windows running the following:
